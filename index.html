@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>E-Sertifikat | Conservation Camp HIMPALA UNIPER</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FFFDF0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    /* Efek Tombol 3D Modern */
+    .btn-3d-yellow {
+      background-color: #FFD900;
+      color: #123B8F;
+      border: 2.5px solid #123B8F;
+      box-shadow: 0 5px 0 #123B8F;
+      transition: all 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-3d-yellow:active {
+      transform: translateY(4px);
+      box-shadow: 0 1px 0 #123B8F;
+    }
+    .btn-3d-navy {
+      background-color: #123B8F;
+      color: #FFD900;
+      border: 2.5px solid #091E4A;
+      box-shadow: 0 5px 0 #091E4A;
+      transition: all 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-3d-navy:active {
+      transform: translateY(4px);
+      box-shadow: 0 1px 0 #091E4A;
+    }
+    /* Animasi Kartu Muncul */
+    @keyframes popUp {
+      0% { opacity: 0; transform: translateY(18px) scale(0.98); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .animate-popup {
+      animation: popUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between text-slate-900 selection:bg-[#FFD900] selection:text-[#123B8F]">
+
+  <!-- Header Modern ala Aplikasi Mobile -->
+  <header class="relative bg-[#FFD900] pt-8 pb-20 px-5 rounded-b-[2.5rem] border-b-4 border-[#123B8F] shadow-md overflow-hidden">
+    <!-- Ornamen Latar Belakang -->
+    <div class="absolute -top-12 -right-12 w-44 h-44 bg-white/35 rounded-full blur-2xl pointer-events-none"></div>
+    <div class="absolute bottom-0 -left-10 w-36 h-36 bg-[#123B8F]/10 rounded-full blur-xl pointer-events-none"></div>
+
+    <div class="max-w-md mx-auto text-center relative z-10">
+      <div class="inline-flex items-center gap-2 bg-[#123B8F] text-[#FFD900] text-[11px] font-extrabold px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-sm mb-3">
+        <span class="w-2 h-2 rounded-full bg-[#FFD900] animate-ping"></span>
+        HUT 13 Tahun HIMPALA UNIPER
+      </div>
+      <h1 class="font-display text-3xl sm:text-4xl font-extrabold text-[#123B8F] tracking-tight leading-none">
+        E-SERTIFIKAT
+      </h1>
+      <p class="text-xs sm:text-sm font-bold text-slate-900/90 mt-2 leading-snug">
+        Conservation Camp &amp; Pengabdian Lingkungan[cite: 1]<br>
+        <span class="text-[#123B8F]">Kelekak Bangka • 21–22 November 2026</span>[cite: 1]
+      </p>
+    </div>
+  </header>
+
+  <!-- Konten Utama Mengambang -->
+  <main class="flex-grow max-w-md w-full mx-auto px-4 -mt-12 pb-10 relative z-20">
+    
+    <!-- Kartu Form Input -->
+    <div class="bg-white rounded-3xl shadow-[0_14px_35px_-10px_rgba(18,59,143,0.18)] border-2 border-[#123B8F] p-6">
+      <div class="flex items-center gap-3.5 mb-5 pb-4 border-b border-slate-100">
+        <div class="w-11 h-11 rounded-2xl bg-[#FFF6C2] border-2 border-[#FFD900] flex items-center justify-center text-[#123B8F] shrink-0 shadow-xs">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="6"/>
+            <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+          </svg>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-lg text-[#123B8F] leading-tight">Cetak Sertifikat Digital</h2>
+          <p class="text-xs text-slate-500 font-medium">Lengkapi data di bawah untuk mengunduh</p>
+        </div>
+      </div>
+
+      <form id="certForm" class="space-y-4">
+        <div>
+          <label for="nama" class="block text-xs font-extrabold uppercase tracking-wider text-slate-700 mb-1.5">
+            Nama Lengkap &amp; Gelar <span class="text-red-500">*</span>
+          </label>
+          <input type="text" id="nama" required autocomplete="name" placeholder="Contoh: Muhammad Azril"
+            class="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border-2 border-slate-200 focus:bg-white focus:border-[#123B8F] focus:ring-4 focus:ring-[#FFD900]/40 outline-none transition font-bold text-base text-slate-900 placeholder:font-normal placeholder:text-slate-400">
+        </div>
+
+        <div>
+          <label for="instansi" class="block text-xs font-extrabold uppercase tracking-wider text-slate-700 mb-1.5">
+            Asal Instansi / Kampus / Organisasi <span class="text-red-500">*</span>
+          </label>
+          <input type="text" id="instansi" required placeholder="Contoh: HIMPALA Universitas Pertiba"
+            class="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border-2 border-slate-200 focus:bg-white focus:border-[#123B8F] focus:ring-4 focus:ring-[#FFD900]/40 outline-none transition font-semibold text-base text-slate-900 placeholder:font-normal placeholder:text-slate-400">
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" id="btnGenerate"
+            class="btn-3d-yellow w-full font-display font-extrabold text-base py-4 px-6 rounded-2xl flex items-center justify-center gap-2.5 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <span id="btnLabel">PROSES &amp; UNDUH SEKARANG</span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Kartu Hasil & Preview Sertifikat -->
+    <div id="previewBox" class="hidden animate-popup mt-6 bg-white rounded-3xl shadow-[0_14px_35px_-10px_rgba(18,59,143,0.2)] border-2 border-[#123B8F] p-5 space-y-4">
+      <div class="flex items-center justify-between bg-emerald-50 border border-emerald-200 text-emerald-800 px-4 py-2.5 rounded-2xl">
+        <div class="flex items-center gap-2">
+          <span class="flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500 text-white text-xs font-bold">✓</span>
+          <span class="text-xs font-bold">Sertifikat Siap Disimpan!</span>
+        </div>
+        <span class="text-[10px] font-extrabold uppercase bg-emerald-200/80 px-2 py-0.5 rounded-md">HD PNG</span>
+      </div>
+
+      <!-- Canvas Tersembunyi -->
+      <canvas id="certCanvas" class="hidden"></canvas>
+
+      <!-- Gambar Hasil Render (Bisa ditekan lama di HP untuk Save Image) -->
+      <div class="relative rounded-2xl overflow-hidden border-2 border-slate-200 bg-slate-100 shadow-inner">
+        <img id="resultImage" alt="Sertifikat Anda" class="w-full h-auto block">
+      </div>
+
+      <div class="bg-[#FFF9D6] border border-[#FFD900] rounded-xl p-3 text-center">
+        <p class="text-[11px] text-slate-700 font-medium leading-relaxed">
+          Jika tidak otomatis tersimpan, tekan tombol biru di bawah atau <b>tekan &amp; tahan gambar</b> lalu pilih <i>Simpan Gambar</i>.
+        </p>
+      </div>
+
+      <!-- Tombol Unduh Manual -->
+      <a id="downloadLink" download="Sertifikat.png"
+        class="btn-3d-navy w-full font-display font-extrabold text-sm py-4 px-6 rounded-2xl flex items-center justify-center gap-2 cursor-pointer text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+          <polyline points="17 21 17 13 7 13 7 21"/>
+          <polyline points="7 3 7 8 15 8"/>
+        </svg>
+        UNDUH ULANG KE GALERI
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer Minimalis -->
+  <footer class="bg-[#123B8F] text-white py-5 px-4 text-center border-t-4 border-[#FFD900]">
+    <p class="font-display font-bold text-xs tracking-wide text-[#FFD900]">
+      HIMPALA UNIVERSITAS PERTIBA
+    </p>
+    <p class="text-[11px] text-white/75 mt-0.5">
+      Conservation Camp &amp; Pengabdian Lingkungan • Bangka Belitung[cite: 1]
+    </p>
+  </footer>
+
+  <!-- Template Gambar -->
+  <img id="templateImg" src="COC.jpg" alt="Template" class="hidden">
+
+  <script>
+    const form = document.getElementById('certForm');
+    const canvas = document.getElementById('certCanvas');
+    const ctx = canvas.getContext('2d');
+    const templateImg = document.getElementById('templateImg');
+    const previewBox = document.getElementById('previewBox');
+    const resultImage = document.getElementById('resultImage');
+    const downloadLink = document.getElementById('downloadLink');
+    const btnLabel = document.getElementById('btnLabel');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nama = document.getElementById('nama').value.trim();
+      const instansi = document.getElementById('instansi').value.trim();
+
+      if (!templateImg.complete || templateImg.naturalWidth === 0) {
+        alert('File gambar COC.jpg belum terbaca. Pastikan file COC.jpg berada dalam satu folder yang sama dengan index.html.');
+        return;
+      }
+
+      btnLabel.textContent = 'MEMPROSES SERTIFIKAT...';
+
+      setTimeout(() => {
+        canvas.width = templateImg.naturalWidth;
+        canvas.height = templateImg.naturalHeight;
+
+        ctx.drawImage(templateImg, 0, 0);
+
+        const centerX = canvas.width / 2;
+
+        // Tulis NAMA di kotak putih bagian atas
+        let fontSizeNama = Math.round(canvas.width * 0.042);
+        ctx.font = `800 ${fontSizeNama}px 'Plus Jakarta Sans', sans-serif`;
+        
+        const maxWidth = canvas.width * 0.68;
+        while (ctx.measureText(nama.toUpperCase()).width > maxWidth && fontSizeNama > 20) {
+          fontSizeNama -= 2;
+          ctx.font = `800 ${fontSizeNama}px 'Plus Jakarta Sans', sans-serif`;
+        }
+
+        ctx.fillStyle = '#0F172A';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(nama.toUpperCase(), centerX, canvas.height * 0.465);
+
+        // Tulis INSTANSI tepat di bawah nama
+        const fontSizeInstansi = Math.round(canvas.width * 0.022);
+        ctx.font = `700 ${fontSizeInstansi}px 'Plus Jakarta Sans', sans-serif`;
+        ctx.fillStyle = '#475569';
+        ctx.fillText(instansi, centerX, canvas.height * 0.518);
+
+        const cleanName = nama.replace(/[^a-zA-Z0-9]/g, '_') || 'Peserta';
+        const fileName = `Sertifikat_ConservationCamp_${cleanName}.png`;
+
+        try {
+          canvas.toBlob(function(blob) {
+            if (!blob) {
+              alert('Gagal memproses file. Pastikan folder ini sudah di-upload ke Netlify/hosting.');
+              btnLabel.textContent = 'PROSES & UNDUH SEKARANG';
+              return;
+            }
+            const url = URL.createObjectURL(blob);
+            resultImage.src = url;
+            downloadLink.href = url;
+            downloadLink.download = fileName;
+
+            previewBox.classList.remove('hidden');
+            btnLabel.textContent = 'PROSES & UNDUH SEKARANG';
+            
+            setTimeout(() => {
+              previewBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+
+            // Picu unduhan otomatis
+            downloadLink.click();
+          }, 'image/png', 1.0);
+        } catch (err) {
+          btnLabel.textContent = 'PROSES & UNDUH SEKARANG';
+          alert('Browser memblokir unduhan lokal (file://). Silakan upload folder website ini ke Netlify Drop (app.netlify.com/drop) terlebih dahulu agar berjalan online.');
+        }
+      }, 150);
+    });
+  </script>
+</body>
+</html>
